@@ -1,0 +1,30 @@
+extends layout 
+
+block content 
+   h1 Form to generate an Image
+
+   form(method="post")
+      label(for="height") Height: 
+      input(type="text", name="height")
+      br
+      br
+      label(for="width") Width: 
+      input(type="text", name="width")
+      br
+      br
+      label(for="blur") Blur: 
+      input(type="text", name="blur")
+      br
+      br
+      label(for="grayscale") Grayscale?: 
+      input(type="checkbox", name="grayscale")
+      br
+      br
+      button(type="submit") Submit
+   
+
+   if link
+      br
+      br
+      h1 Rendered image:
+      img(src=link)

@@ -1,0 +1,21 @@
+extends layout 
+
+block content 
+   h1 Form to generate an Image
+
+   form(method="post")
+      label(for="width") Width: 
+      input(type="text", name="width")
+      br
+      br
+      label(for="value") Value: 
+      input(type="text", name="value")
+      br
+      br
+      button(type="submit") Submit
+   
+   if link
+      br
+      br
+      h1 QR Code Image:
+      img(src=link)
